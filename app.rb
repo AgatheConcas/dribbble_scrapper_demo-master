@@ -14,8 +14,7 @@ get '/search' do
   html_file = open(search_url)
   html_document = Nokogiri::HTML(html_file)
 
-  collection_css_path = 'li.group' # <= customize
-  collection = html_document.css(collection_css_path)
+  collection = html_document.css('li.group')
 
   collection.each do |element|
     #title
