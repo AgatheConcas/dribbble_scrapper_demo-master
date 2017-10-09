@@ -9,7 +9,7 @@ end
 get '/search' do
   @cards = []
 
-  search_url = "https://dribbble.com/search?q=food" # <= customize
+  search_url = "https://dribbble.com/search?q=food" 
 
   html_file = open(search_url)
   html_document = Nokogiri::HTML(html_file)
